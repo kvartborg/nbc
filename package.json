@@ -1,0 +1,48 @@
+{
+  "name": "nbcompile",
+  "description": "Bash script for compiling java files in netbeans project",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "test": "npm run lint && jest",
+    "test:watch": "jest --watch",
+    "lint": "standard | snazzy; exit 0",
+    "lint:fix": "standard --fix | snazzy; exit 0",
+    "prepublish": "npm test"
+  },
+  "main": "lib/index.js",
+  "module": "src/index.js",
+  "files": [
+    "lib",
+    "dist",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "module"
+  ],
+  "bin": {
+    "nbcompile": "./bin/nbcompile.sh"
+  },
+  "author": {
+    "name": "Frederik Kvartborg Albertsen",
+    "email": "hello@kvartborg.net",
+    "url": "https://kvartborg.net"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kvartborg/nbcompile"
+  },
+  "bugs": {
+    "url": "https://github.com/kvartborg/nbcompile/issues"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-jest": "^21.0.2",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.24.1",
+    "jest": "^21.1.0",
+    "snazzy": "^7.0.0",
+    "standard": "^10.0.2"
+  }
+}
