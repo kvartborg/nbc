@@ -1,7 +1,7 @@
 {
   "name": "nbcompile",
   "description": "Bash script for compiling java files in netbeans project",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "global": true,
   "scripts": {
