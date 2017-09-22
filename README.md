@@ -1,6 +1,7 @@
 # nbcompile
+[![Build Status](https://travis-ci.org/kvartborg/nbcompile.svg?branch=master)](https://travis-ci.org/kvartborg/nbcompile)
 
-Is a simple bash script which emulates the NetBeans compiler.
+Is a bash script which emulates the NetBeans compiler.
 
 ### Install
 Use npm to install the script globally.
