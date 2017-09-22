@@ -3,6 +3,7 @@
   "description": "Bash script for compiling java files in netbeans project",
   "version": "1.0.0",
   "license": "MIT",
+  "global": true,
   "scripts": {
     "test": "npm run lint && jest",
     "test:watch": "jest --watch",
