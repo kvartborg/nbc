@@ -22,7 +22,11 @@
     "LICENSE"
   ],
   "keywords": [
-    "module"
+    "Compile",
+    "NetBeans",
+    "Project",
+    "Terminal",
+    "cli"
   ],
   "bin": {
     "nbcompile": "./bin/nbcompile.sh"
