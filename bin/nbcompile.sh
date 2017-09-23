@@ -14,7 +14,7 @@ buildDir="${buildDirProperty/build.dir=/}/classes"
 mainClass="${mainClassProperty/main.class=/}"
 
 # Compile source
-if [ ! -f "./src/${mainClass}.java" ]; then
+if [ ! -f "./src/$(echo $mainClass | tr . /).java" ]; then
   echo "The main class ${mainClass} wasn't found"
   exit 1
 fi
@@ -26,7 +26,7 @@ fi
 
 # Compile files
 cd ./src
-javac -d "../${buildDir}" "${mainClass}.java"
+javac -d "../${buildDir}" "$(echo $mainClass | tr . /).java"
 cd ..
 
 # Execute the compiled files
