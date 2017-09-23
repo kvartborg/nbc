@@ -1,7 +1,7 @@
 {
   "name": "nbcompile",
   "description": "Compile a NetBeans project from the terminal",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "license": "MIT",
   "global": true,
   "scripts": {
