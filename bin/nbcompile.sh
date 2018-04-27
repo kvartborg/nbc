@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# Check what version of nbcompile is running
+if [ "$1" == "--version" ] || [ "$1" == "-v" ]; then
+  echo "[version]"
+  exit 0
+fi
+
 # Check if PWD is a NetBeans Project
 if [ ! -d "./nbproject" ] || [ ! -d "./src" ]; then
   echo "Not a netbeans project"
@@ -19,15 +25,10 @@ if [ ! -f "./src/$(echo $mainClass | tr . /).java" ]; then
   exit 1
 fi
 
-# Create the build directory if it doesn't exist
-if [ ! -d "$buildDir" ]; then
-  mkdir -p $buildDir
+
+if [ "$1" == "clean" ]; then
+  eval "ant -f $(pwd) -Dnb.internal.action.name=rebuild clean jar > /dev/null"
 fi
 
-# Compile files
-cd ./src
-javac -d "../${buildDir}" "$(echo $mainClass | tr . /).java"
-cd ..
-
-# Execute the compiled files
-cd $buildDir && java $mainClass
+# run program
+eval "ant -f $(pwd) -Dnb.internal.action.name=run run > /dev/null"

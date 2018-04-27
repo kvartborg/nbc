@@ -7,9 +7,11 @@
   "scripts": {
     "test": "npm run lint && jest",
     "test:watch": "jest --watch",
+    "build": "node scripts/set-version",
     "lint": "standard | snazzy; exit 0",
     "lint:fix": "standard --fix | snazzy; exit 0",
-    "prepublish": "npm test"
+    "prepublish": "npm test && npm run build",
+    "postpublish": "git checkout ."
   },
   "main": "lib/index.js",
   "module": "src/index.js",
