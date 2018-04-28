@@ -2,7 +2,7 @@
 
 # Check what version of nbcompile is running
 if [ "$1" == "--version" ] || [ "$1" == "-v" ]; then
-  echo "[version]"
+  echo "1.3.0"
   exit 0
 fi
 
