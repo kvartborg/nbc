@@ -2,7 +2,7 @@
 [![npm version](https://img.shields.io/npm/v/nbcompile.svg)](https://www.npmjs.com/package/nbcompile)
 [![Build Status](https://travis-ci.org/kvartborg/nbcompile.svg?branch=master)](https://travis-ci.org/kvartborg/nbcompile)
 
-Is a bash script which emulates the NetBeans compiler.
+Compile NetBeans projects directly from your terminal.
 
 ### Install
 Use npm to install the script globally.

@@ -1,6 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Should compile java code and place it in the build folder 1`] = `"works!"`;
+exports[`Should compile java code and place it in the build folder 1`] = `
+"
+BUILD SUCCESSFUL
+Total time: 0 seconds
+"
+`;
 
 exports[`Should exit if the current directory isn't a NetBeans project 1`] = `
 "Not a netbeans project
