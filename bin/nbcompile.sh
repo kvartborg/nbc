@@ -14,9 +14,7 @@ fi
 
 # Get the main class and build directory from the project properties
 properties="./nbproject/project.properties"
-buildDirProperty=$(cat $properties | grep "build.dir=")
 mainClassProperty=$(cat $properties | grep "main.class=")
-buildDir="${buildDirProperty/build.dir=/}/classes"
 mainClass="${mainClassProperty/main.class=/}"
 
 # Compile source
@@ -25,10 +23,10 @@ if [ ! -f "./src/$(echo $mainClass | tr . /).java" ]; then
   exit 1
 fi
 
-
+# Run clean
 if [ "$1" == "clean" ]; then
-  eval "ant -f $(pwd) -Dnb.internal.action.name=rebuild clean jar > /dev/null"
+  eval "ant -q -f $(pwd) -Dnb.internal.action.name=rebuild clean jar"
 fi
 
 # run program
-eval "ant -f $(pwd) -Dnb.internal.action.name=run run > /dev/null"
+eval "ant -q -f $(pwd) -Dnb.internal.action.name=run run"
