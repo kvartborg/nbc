@@ -26,5 +26,12 @@ Navigate to a NetBeans project in your terminal and run the `nbcompile` command.
 This will compile and run your java code like the NetBeans IDE.
 ```sh
 cd my/netbeans/project
-nbcompile
+nbc
+```
+> The command is aliased as both `nbcompile` and `nbc`.
+
+#### Clean & build
+NetBeans clean and build feature is also supported by nbcompile, run the `clean` command and the project dist and build folder will be clean before execution.
+```sh
+nbc clean
 ```

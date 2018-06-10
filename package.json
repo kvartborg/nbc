@@ -12,25 +12,22 @@
     "prepublish": "npm test && npm run build",
     "postpublish": "git checkout ."
   },
-  "main": "lib/index.js",
-  "module": "src/index.js",
   "files": [
     "bin",
-    "lib",
-    "dist",
-    "src",
     "README.md",
     "LICENSE"
   ],
   "keywords": [
     "Compile",
     "NetBeans",
+    "Java",
     "Project",
     "Terminal",
     "cli"
   ],
   "bin": {
-    "nbcompile": "./bin/nbcompile.sh"
+    "nbcompile": "./bin/nbcompile.sh",
+    "nbc": "./bin/nbcompile.sh"
   },
   "author": {
     "name": "Frederik Kvartborg Albertsen",
