@@ -24,12 +24,12 @@ if [ ! -f "./src/$(echo $mainClass | tr . /).java" ]; then
 fi
 
 command="ant -f $(pwd)"
-args="| grep '\[java\]' | sed -E 's/\[java\]+/ /g' | sed -E 's/(\.\.\.).[0-9].(\bmore\b)?.*/ /g' | sed -E 's/       //g'"
+transform="| grep '\[java\]' | sed -E 's/\[java\]+/ /g' | sed -E 's/(\.\.\.).[0-9].(\bmore\b)?.*/ /g' | sed -E 's/       //g'"
 
 # Run clean
 if [ "$1" == "clean" ]; then
-  eval "$command -Dnb.internal.action.name=rebuild clean jar $args"
+  eval "$command -Dnb.internal.action.name=rebuild clean jar $transform"
 fi
 
 # run program
-eval "$command -Dnb.internal.action.name=run run $args"
+eval "$command -Dnb.internal.action.name=run run $transform"

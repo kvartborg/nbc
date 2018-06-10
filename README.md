@@ -4,6 +4,12 @@
 
 Compile NetBeans projects directly from your terminal.
 
+### Requirements
+This script is using Apache [`Ant`](https://ant.apache.org/) under the hood to compile
+the source, your need the latest version for this to work.
+Supported platforms are `macOS` and `linux`, it should work on `Windows`
+with the bash emulator.
+
 ### Install
 Use npm to install the script globally.
 ```sh
