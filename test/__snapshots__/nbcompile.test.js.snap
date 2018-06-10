@@ -1,9 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Should compile java code and place it in the build folder 1`] = `
-"
-BUILD SUCCESSFUL
-Total time: 0 seconds
+"works!
 "
 `;
 

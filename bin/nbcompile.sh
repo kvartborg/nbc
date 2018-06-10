@@ -23,10 +23,13 @@ if [ ! -f "./src/$(echo $mainClass | tr . /).java" ]; then
   exit 1
 fi
 
+command="ant -f $(pwd)"
+args="| grep '\[java\]' | sed -E 's/\[java\]+/ /g' | sed -E 's/(\.\.\.).[0-9].(\bmore\b)?.*/ /g' | sed -E 's/       //g'"
+
 # Run clean
 if [ "$1" == "clean" ]; then
-  eval "ant -q -f $(pwd) -Dnb.internal.action.name=rebuild clean jar"
+  eval "$command -Dnb.internal.action.name=rebuild clean jar $args"
 fi
 
 # run program
-eval "ant -q -f $(pwd) -Dnb.internal.action.name=run run"
+eval "$command -Dnb.internal.action.name=run run $args"
