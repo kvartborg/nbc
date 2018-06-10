@@ -5,9 +5,8 @@
   "license": "MIT",
   "global": true,
   "scripts": {
-    "test": "npm run lint && jest",
-    "test:watch": "jest --watch",
-    "build": "node scripts/set-version",
+    "test": "npm run build && npm run lint && jest",
+    "build": "cp -a src/nbcompile.sh bin/nbcompile.sh && node scripts/set-version",
     "lint": "standard | snazzy; exit 0",
     "lint:fix": "standard --fix | snazzy; exit 0",
     "prepublish": "npm test && npm run build",
