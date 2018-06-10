@@ -48,9 +48,9 @@
   "devDependencies": {
     "babel-cli": "^6.24.1",
     "babel-jest": "^23.0.1",
-    "babel-plugin-transform-es2015-modules-commonjs": "^6.24.1",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
     "jest": "^23.1.0",
-    "snazzy": "^7.0.0",
+    "snazzy": "^7.1.1",
     "standard": "^11.0.1"
   }
 }
