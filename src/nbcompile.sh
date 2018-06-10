@@ -6,7 +6,7 @@ if [ "$1" == "--version" ] || [ "$1" == "-v" ]; then
   exit 0
 fi
 
-# Check what version of nbcompile is running
+# Show help message
 if [ "$1" == "--help" ] || [ "$1" == "-h" ]; then
   echo "nbcompile [version]"
   echo ""

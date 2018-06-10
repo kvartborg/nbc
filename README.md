@@ -31,7 +31,7 @@ nbc
 > The command is aliased as both `nbcompile` and `nbc`.
 
 #### Clean & build
-NetBeans clean and build feature is also supported by nbcompile, run the `clean` command and the project dist and build folder will be clean before execution.
+NetBeans clean and build feature is also supported by nbcompile, run the `clean` command and the project dist and build folder will be cleaned before execution.
 ```sh
 nbc clean
 ```
